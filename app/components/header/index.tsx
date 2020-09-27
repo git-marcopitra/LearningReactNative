@@ -10,7 +10,9 @@ interface Props extends ScreenProps {
 
 const Header: FC<Props> = ({ back }) => (
   <HeaderWrapper darkBlue>
-    <Text center title white>LearningApp</Text>
+    <Text center title white>
+      LearningApp
+    </Text>
   </HeaderWrapper>
 );
 

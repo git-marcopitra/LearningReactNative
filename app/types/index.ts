@@ -1,4 +1,4 @@
-import { FlattenSimpleInterpolation } from "styled-components";
+import { FlattenSimpleInterpolation } from 'styled-components';
 
 export interface IObject<T> {
   [key: string]: T;

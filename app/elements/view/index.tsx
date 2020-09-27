@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { Platform, StatusBar, ViewProps } from 'react-native';
+import { ViewProps } from 'react-native';
 import { css } from 'styled-components/native';
+
 import { Color } from '../../constants/pallet';
 import { TStylesObject } from '../../types';
 import { StyledView } from './view.styles';
@@ -19,14 +20,13 @@ const View: FC<Props> = ({
   autoHeight,
   ...props
 }) => {
-
   const Styles = {} as TStylesObject;
 
   if (fullWidth)
     Styles.fullWidth = css`
       width: 100%;
     `;
-  
+
   if (flex)
     Styles.flex = css`
       flex: 1;
@@ -36,13 +36,13 @@ const View: FC<Props> = ({
     Styles.darkBlue = css`
       background-color: ${Color.DarkBlue};
     `;
-  
+
   if (autoHeight)
     Styles.autoHeight = css`
       height: auto;
     `;
-  
-  return (<StyledView {...props} styles={Styles} />)
+
+  return <StyledView {...props} styles={Styles} />;
 };
 
 export default View;
