@@ -51,6 +51,11 @@ const Text: FC<Props> = ({
     Styles.blue = css`
       color: ${Color.Blue};
     `;
+  
+  if (size)
+    Styles.size = css`
+      font-size: ${size};
+    `;
 
   return <StyledText {...props} styles={Styles} />;
 };

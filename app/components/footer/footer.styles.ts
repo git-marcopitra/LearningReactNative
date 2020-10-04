@@ -11,11 +11,11 @@ export const FooterWrapper = styled(View)`
 export const AntIcons = styled(Icon)`
   color: white;
   font-size: 25px;
+  padding: 10px;
 `;
 
-export const FooterItem = styled(View)`
+export const FooterItem = styled.TouchableWithoutFeedback`
   width: 25%;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

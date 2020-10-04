@@ -11,27 +11,27 @@ import {
   UserScreen,
 } from '../screens';
 
-const Stack = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
 const MainNavigator = () => (
   <NavigationContainer>
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={Route.Home}>
+    <Navigator screenOptions={{ headerShown: false }}>
+      <Screen name={Route.Home}>
         {({ navigation }) => <HomeScreen navigation={navigation} />}
-      </Stack.Screen>
-      <Stack.Screen name={Route.List}>
+      </Screen>
+      <Screen name={Route.List}>
         {({ navigation }) => <ListScreen navigation={navigation} />}
-      </Stack.Screen>
-      <Stack.Screen name={Route.Add}>
+      </Screen>
+      <Screen name={Route.Add}>
         {({ navigation }) => <AddScreen navigation={navigation} />}
-      </Stack.Screen>
-      <Stack.Screen name={Route.Traffig}>
+      </Screen>
+      <Screen name={Route.Traffig}>
         {({ navigation }) => <TraffigScreen navigation={navigation} />}
-      </Stack.Screen>
-      <Stack.Screen name={Route.User}>
+      </Screen>
+      <Screen name={Route.User}>
         {({ navigation }) => <UserScreen navigation={navigation} />}
-      </Stack.Screen>
-    </Stack.Navigator>
+      </Screen>
+    </Navigator>
   </NavigationContainer>
 );
 
